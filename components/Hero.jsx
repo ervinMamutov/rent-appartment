@@ -1,3 +1,5 @@
+import InfoBoxes from './InfoBoxes';
+
 const Hero = () => {
   return (
     <section className='bg-blue-700 py-20 mb-4'>
