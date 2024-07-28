@@ -31,7 +31,6 @@ const fetchProperty = async (id) => {
 
     const url = `${apiDomain}/properties/${id}`;
     const res = await fetch(url);
-    console.log({ res: res });
 
     if (!res.ok) {
       throw new Error('Failed fetch new data');
