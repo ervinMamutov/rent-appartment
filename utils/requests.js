@@ -22,14 +22,16 @@ const fetchProperties = async () => {
 };
 
 // Fetch single property
-const fetchProperty = async () => {
+const fetchProperty = async (id) => {
   try {
     // Handle the case where the domain is not available yet
     if (!apiDomain) {
       return null;
     }
 
-    const res = await fetch(`${apiDomain}/properties/${id}`);
+    const url = `${apiDomain}/properties/${id}`;
+    const res = await fetch(url);
+    console.log({ res: res });
 
     if (!res.ok) {
       throw new Error('Failed fetch new data');
