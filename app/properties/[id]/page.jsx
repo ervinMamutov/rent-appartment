@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { fetchProperty } from '@/utils/requests';
+import PropertyImages from '@/components/PropertyImages';
 
 import Link from 'next/link';
 import Spinner from '@/components/Spinner';
@@ -153,6 +154,7 @@ const PropertyPage = () => {
               </div>
             </div>
           </section>
+          <PropertyImages images={property.images} />
         </>
       )}
     </>
